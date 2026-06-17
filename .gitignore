@@ -1,8 +1,37 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# Gradle
 
-# Ignore Gradle build output directory
-build
+.gradle/
+build/
 
-# Ignore Kotlin plugin data
-.kotlin
+# Java
+
+*.class
+*.log
+
+# IDE - VS Code
+
+.vscode/
+
+# IDE - IntelliJ
+
+.idea/
+*.iml
+
+# MacOS
+
+.DS_Store
+
+# Test Reports
+
+test-output/
+allure-results/
+allure-report/
+
+# Screenshots
+
+screenshots/
+
+# Temporary files
+
+*.tmp
+*.swp
