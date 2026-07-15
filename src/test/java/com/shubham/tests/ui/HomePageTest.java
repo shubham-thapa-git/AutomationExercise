@@ -8,11 +8,16 @@ import com.shubham.tests.base.BaseTest;
 
 public class HomePageTest extends BaseTest {
     
-    
-    
+
+    @Test
+    public void signupLogin(){
+        
+    }
+   
+
     @Test
     public void verifyHomePageTitle(){
-        HomePage homePage = new HomePage(driver);
-        Assert.assertEquals(homePage.getPageTitle(), "Automation Exercise");
+        HomePage homePageObj = new HomePage(driver);
+        Assert.assertEquals(homePageObj.getPageTitle(), "Automation Exercise");
     }
 }

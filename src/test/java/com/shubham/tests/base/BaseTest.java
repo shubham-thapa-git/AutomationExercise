@@ -19,8 +19,7 @@ public class BaseTest {
         driver = BrowserFactory.createDriver(browser);
         DriverManager.setDriver(driver);
         driver.manage().window().maximize();
-        driver.get(ConfigReader.getBaseUrl());
-       
+        driver.get(ConfigReader.getBaseUrl()); 
     }
 
     @AfterMethod

@@ -26,21 +26,26 @@ public class ConfigReader {
     }
 
 
-public static String getBrowser(){
-    String browser = properties.getProperty("browser");
-    if(browser == null){
-        throw new RuntimeException("browser property not found in the config.properties file");
+public static String getBrowser() {
+
+    String browser = System.getProperty("browser");
+
+    if (browser == null || browser.isBlank()) {
+        browser = properties.getProperty("browser");
     }
-    System.out.println(browser);
+
     return browser;
 }
  
-public static String getBaseUrl(){
-    String baseUrl = properties.getProperty("baseUrl");
-    if(baseUrl == null){
-        throw new RuntimeException("baseUrl property not found in the config.properties file");
+public static String getBaseUrl() {
+
+    String url = System.getProperty("baseUrl");
+
+    if (url == null || url.isBlank()) {
+        url = properties.getProperty("baseUrl");
     }
-    return baseUrl;
+
+    return url;
 }
 
 

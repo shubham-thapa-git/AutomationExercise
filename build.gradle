@@ -23,13 +23,16 @@ implementation("org.seleniumhq.selenium:selenium-java:4.41.0")
 //WebDriverManager dependency
 // Source: https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
 implementation("io.github.bonigarcia:webdrivermanager:6.3.3")
-
-
+//RestAssured dependency
+// Source: https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+testImplementation("io.rest-assured:rest-assured:6.0.0")
 }
 test {
     useTestNG()
 
- testLogging {
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+        exceptionFormat "FULL"
         showStandardStreams = true
     }
 }

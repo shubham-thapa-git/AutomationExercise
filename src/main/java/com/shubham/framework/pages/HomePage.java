@@ -7,7 +7,9 @@ public class HomePage extends BasePage {
     
 
       
-    private final By SignUpLoginButton = By.partialLinkText(" Signup / Login");
+    
+    private final By loginSignupButton = By.cssSelector("a[href='/login']");
+
 
 
 
@@ -22,7 +24,7 @@ public class HomePage extends BasePage {
     }
 
     public LoginPage clickSignUpLoginButton(){
-        driver.findElement(SignUpLoginButton).click();
+        driver.findElement(loginSignupButton).click();
         return new LoginPage(driver);
     }
   
