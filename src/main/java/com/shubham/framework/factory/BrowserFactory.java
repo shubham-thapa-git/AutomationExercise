@@ -22,6 +22,7 @@ public class BrowserFactory {
 
                 boolean headless = Boolean.parseBoolean(
                         System.getProperty("headless", "false"));
+                        System.out.println("Headless mode: "+ headless);
 
                 if (headless) {
                     options.addArguments("--headless=new");
