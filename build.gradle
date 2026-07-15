@@ -30,6 +30,11 @@ testImplementation("io.rest-assured:rest-assured:6.0.0")
 test {
     useTestNG()
 
+    doFirst {
+        println "Gradle browser: ${System.getProperty('browser')}"
+        println "Gradle headless: ${System.getProperty('headless')}"
+    }
+    
     testLogging {
         events "PASSED", "FAILED", "SKIPPED"
         exceptionFormat "FULL"
